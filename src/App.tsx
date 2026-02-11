@@ -5,7 +5,7 @@ export default function Page() {
   const [noCount, setNoCount] = useState(0);
   const [yesPressed, setYesPressed] = useState(false);
   const [hearts, setHearts] = useState<{ id: number; left: string; duration: string; size: string }[]>([]);
-  const yesButtonSize = noCount * 20 + 16;
+  const yesButtonSize = Math.min(noCount * 20 + 16, 220);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -68,7 +68,7 @@ export default function Page() {
       {yesPressed ? (
         <>
           <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
-          <div className="my-4 text-4xl font-bold">❤️ AAAAAAAA TI AMO PATATA!! ;)) ❤️</div>
+          <div className="my-4 text-4xl font-bold text-center PX-2">❤️ AAAAAAAA TI AMO PATATA!! ;)) ❤️</div>
         </>
       ) : (
         <>
@@ -80,8 +80,8 @@ export default function Page() {
               : "https://gifdb.com/images/high/milk-and-mocha-love-me-rg6ve4g0z8mip842.gif"
             }
           />
-          <h1 className="my-4 text-4xl">Vuoi essere la mia Valentina? 🥺</h1>
-          <div className="flex items-center">
+          <h1 className="my-4 text-4xl text-center px-2">Vuoi essere la mia Valentina? 🥺</h1>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 px-4 w-full">
             <button
               className={`mr-4 rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700`}
               style={{ fontSize: yesButtonSize }}

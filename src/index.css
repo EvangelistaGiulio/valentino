@@ -87,6 +87,6 @@ button:focus-visible {
   top: -10vh;
   user-select: none;
   pointer-events: none;
-  z-index: 10; /* Così cadono davanti allo sfondo ma non bloccano i bottoni */
+  z-index: 10;
   animation: falling linear infinite;
 }
