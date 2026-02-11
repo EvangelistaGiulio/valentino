@@ -5,7 +5,7 @@ export default function Page() {
   const [noCount, setNoCount] = useState(0);
   const [yesPressed, setYesPressed] = useState(false);
   const [hearts, setHearts] = useState<{ id: number; left: string; duration: string; size: string }[]>([]);
-  const yesButtonSize = Math.min(noCount * 20 + 16, 220);
+  const yesButtonSize = Math.min(noCount * 20 + 24, 220);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -93,7 +93,7 @@ export default function Page() {
             <button
               onClick={handleNoClick}
               style={{
-                fontSize: noCount=== 17 ? "4rem" : "1rem",
+                fontSize: noCount=== 17 ? "4rem" : "1.5rem",
                 transition: "all 0.1s"
               }}
               className=" w-full md:w-auto rounded bg-red-500 px-8 py-4 font-bold text-white hover:bg-red-700 whitespace-pre-line text-center"
