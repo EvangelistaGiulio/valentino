@@ -83,7 +83,7 @@ export default function Page() {
           <h1 className="my-6 text-3xl md:text-5xl font-bold text-center leading-tight">Vuoi essere la mia Valentina? 🥺</h1>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 w-full max-w-[400px] md:max-w-full z-50">
             <button
-              className={`w-full md:w-auto rounded bg-green-500 px-8 py-4 font-bold text-white hover:bg-green-700 transition-all`}
+              className={`w-auto min-w-[150px] rounded bg-green-500 px-8 py-4 font-bold text-white hover:bg-green-700 transition-all shadow-lg`}
               style={{ fontSize: yesButtonSize }}
               onClick={() => setYesPressed(true)}
             >
@@ -96,7 +96,7 @@ export default function Page() {
                 fontSize: noCount=== 17 ? "4rem" : "1.5rem",
                 transition: "all 0.1s"
               }}
-              className=" w-full md:w-auto rounded bg-red-500 px-8 py-4 font-bold text-white hover:bg-red-700 whitespace-pre-line text-center"
+              className="w-auto min-w-[150px] rounded bg-red-500 px-8 py-4 font-bold text-white hover:bg-red-700 whitespace-pre-line text-center shadow-lg"
             >
               {noCount === 0 ? "No :(" : getNoButtonText()}
             </button>
